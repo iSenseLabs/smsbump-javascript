@@ -5,7 +5,7 @@
 			apikey: '',
 			from: '',
 			to: '',
-			type: '',
+			type: 'sms',
 			media: '',
 			message: '',
 		}
@@ -74,7 +74,7 @@
 			
 			if (settings.to) {
 				if (typeof settings.to == 'object') send_bulk();
-				else send_single(settings.apikey, settings.from, settings.to, settings.message);
+				else send_single(settings.apikey, settings.from, settings.to, settings.type, settings.message);
 			}
 		}
 		
